@@ -113,9 +113,9 @@ Accept: application/json
 ### Posts
 - `GET /api/posts` — list all published posts
 - `GET /api/posts/{slug}` — view a single post
-- `POST /api/posts` — create post (authors only)
-- `PUT /api/posts/{slug}` — update post (author or admin)
-- `DELETE /api/posts/{slug}` — delete post (author or admin)
+- `POST /api/posts` — create post (auth required)
+- `PUT /api/posts/{slug}` — update post (auth required)
+- `DELETE /api/posts/{slug}` — delete post (auth required)
 
 ### Categories
 - `GET /api/categories`
@@ -129,6 +129,13 @@ php artisan test
 ```
 Feature tests and unit tests are located in `tests/Feature` and `tests/Unit` respectively. All major endpoints are covered.
 
+---
+
+## 🧪 Run Local Server
+```bash
+php artisan serve
+```
+The local server will start and can be reached at `http://127.0.0.1:8000`.
 ---
 
 ## 🖼 Frontend Integration Tips
